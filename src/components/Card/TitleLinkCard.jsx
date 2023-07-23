@@ -5,8 +5,8 @@ export const TitleLinkCard = ({ children, title, href }) => {
   return (
     <NoStyleLink href={href}>
       <Title>
-        {children}
-        {title} | Acesse <AiOutlineLink />
+        Acesse <AiOutlineLink /> | {children}
+        {title}
       </Title>
     </NoStyleLink>
   )
