@@ -5,7 +5,7 @@ export const TitleLinkCard = ({ children, title, href }) => {
   return (
     <NoStyleLink href={href}>
       <Title>
-        Acesse <AiOutlineLink /> | {children}
+        Acesse <AiOutlineLink /> <LineSpan> | </LineSpan> {children}
         {title}
       </Title>
     </NoStyleLink>
@@ -14,6 +14,10 @@ export const TitleLinkCard = ({ children, title, href }) => {
 
 const NoStyleLink = styled.a`
   text-decoration: none;
+`
+
+const LineSpan = styled.span`
+  margin-inline: 1rem;
 `
 
 const Title = styled.h2`
