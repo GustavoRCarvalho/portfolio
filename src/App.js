@@ -19,13 +19,15 @@ export const App = () => {
             title={"Lolja - Réplica de Template"}
             href={"https://lolja.xn--gustavocarvalhoportflio-pjc.com.br/"}
           />
-          <Card.ImageWrapper>
-            <Card.Image src={loljatemplate1} />
-            <Card.Image src={loljatemplate2} />
-            <Card.Image src={loljatemplate3} />
-            <Card.Image src={loljatemplate4} />
-            <Card.Image src={loljatemplate5} />
-          </Card.ImageWrapper>
+          <Card.ImageWrapper
+            imagesList={[
+              loljatemplate1,
+              loljatemplate2,
+              loljatemplate3,
+              loljatemplate4,
+              loljatemplate5,
+            ]}
+          ></Card.ImageWrapper>
         </Card.Background>
         <Card.Background>
           <Card.TitleLink
@@ -35,13 +37,13 @@ export const App = () => {
             }
           />
           <Card.ImageWrapper>
-            <Card.Image src={ecommerceredux1} border={"violet"} />
-            <Card.Image src={ecommerceredux2} border={"violet"} />
-            <Card.Image src={ecommerceredux3} border={"violet"} />
+            <Card.Image src={ecommerceredux1} $bordercolor={"violet"} />
+            <Card.Image src={ecommerceredux2} $bordercolor={"violet"} />
+            <Card.Image src={ecommerceredux3} $bordercolor={"violet"} />
           </Card.ImageWrapper>
         </Card.Background>
         <Card.GitLinkedin>
-          <Card.Background backgroundcolor={"#696969"}>
+          <Card.Background $backgroundcolor={"#696969"}>
             <Card.TitleLink
               title={"GitHub"}
               href={"https://github.com/GustavoRCarvalho"}
@@ -49,7 +51,7 @@ export const App = () => {
               <AiOutlineGithub />
             </Card.TitleLink>
           </Card.Background>
-          <Card.Background backgroundcolor={"#1975ff"}>
+          <Card.Background $backgroundcolor={"#1975ff"}>
             <Card.TitleLink
               title={"Linkedin"}
               href={"https://www.linkedin.com/in/gustavo-carvalho-0/"}
