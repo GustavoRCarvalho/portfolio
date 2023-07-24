@@ -7,13 +7,14 @@ import { useState } from "react"
 export const ImageWrapper = ({ children, imagesList = [], $bordercolor }) => {
   const [carouselShow, setCarouselShow] = useState(false)
   const [selected, setSelected] = useState(0)
+
   function handleOutsideClick(e) {
     if (e.target.id === "carousel") {
       setCarouselShow(false)
     }
   }
+
   function handleImageClick(e) {
-    console.log(e.target.id)
     setSelected(Number(e.target.id))
     setCarouselShow(true)
   }
