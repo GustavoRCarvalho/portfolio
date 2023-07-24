@@ -36,11 +36,10 @@ export const App = () => {
               "https://ecommerceredux.xn--gustavocarvalhoportflio-pjc.com.br/roupas/todos"
             }
           />
-          <Card.ImageWrapper>
-            <Card.Image src={ecommerceredux1} $bordercolor={"violet"} />
-            <Card.Image src={ecommerceredux2} $bordercolor={"violet"} />
-            <Card.Image src={ecommerceredux3} $bordercolor={"violet"} />
-          </Card.ImageWrapper>
+          <Card.ImageWrapper
+            imagesList={[ecommerceredux1, ecommerceredux2, ecommerceredux3]}
+            $bordercolor={"violet"}
+          ></Card.ImageWrapper>
         </Card.Background>
         <Card.GitLinkedin>
           <Card.Background $backgroundcolor={"#696969"}>
