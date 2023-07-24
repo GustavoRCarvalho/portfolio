@@ -15,8 +15,10 @@ export const ImageWrapper = ({ children, imagesList = [], $bordercolor }) => {
   }
 
   function handleImageClick(e) {
-    setSelected(Number(e.target.id))
-    setCarouselShow(true)
+    if (window.screen.width > 768) {
+      setSelected(Number(e.target.id))
+      setCarouselShow(true)
+    }
   }
 
   return (
