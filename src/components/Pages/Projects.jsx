@@ -43,6 +43,7 @@ export const Projects = () => {
       <Card.GitLinkedin>
         <Card.Background $backgroundcolor={"#696969"}>
           <Card.TitleLink
+            color={"#ffffffde"}
             title={"GitHub"}
             href={"https://github.com/GustavoRCarvalho"}
           >
@@ -51,6 +52,7 @@ export const Projects = () => {
         </Card.Background>
         <Card.Background $backgroundcolor={"#1975ff"}>
           <Card.TitleLink
+            color={"#ffffffde"}
             title={"Linkedin"}
             href={"https://www.linkedin.com/in/gustavo-carvalho-0/"}
           >

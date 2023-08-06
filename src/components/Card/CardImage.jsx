@@ -5,4 +5,8 @@ export const CardImage = styled.img`
   width: 100%;
 
   cursor: pointer;
+
+  @media (prefers-color-scheme: light) {
+    border: 1px solid #242424;
+  }
 `

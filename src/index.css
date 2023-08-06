@@ -1,6 +1,22 @@
 body {
   margin: 0;
   font-family: "Roboto";
+  color: #ffffffde;
+  background-color: #242424;
+
+  @media screen and (min-width: 1440px) {
+    font-size: large;
+  }
+  @media screen and (max-width: 1280px) {
+    font-size: small;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    color: #383838;
+    background-color: #ffffff;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -10,4 +26,12 @@ body {
   background-color: #777;
   border: 0;
   border-radius: 10px;
+}
+
+@media (prefers-color-scheme: light) {
+  ::-webkit-scrollbar-thumb {
+    background-color: #494949;
+    border: 0;
+    border-radius: 10px;
+  }
 }
