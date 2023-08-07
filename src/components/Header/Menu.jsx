@@ -23,6 +23,7 @@ export const Menu = () => {
 
 const ListMenu = styled.ul`
   background-color: #242424;
+  width: min-content;
 
   border-radius: 2em;
 
@@ -31,7 +32,7 @@ const ListMenu = styled.ul`
   justify-content: center;
   box-shadow: 0px 0px 8px 1px #ffffff2d;
 
-  margin: 1em;
+  margin: 1em auto;
   padding-inline: 2em;
   gap: 2rem;
   overflow: hidden;
