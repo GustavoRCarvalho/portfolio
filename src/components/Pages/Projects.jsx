@@ -1,5 +1,9 @@
 import { Card } from "../Card"
 import { ContentLimiter } from "../Common/ContentLimit"
+import codenamesImage1 from "../../assets/images/codenamesImage1.png"
+import codenamesImage2 from "../../assets/images/codenamesImage2.png"
+import codenamesImage3 from "../../assets/images/codenamesImage3.png"
+import codenamesImage4 from "../../assets/images/codenamesImage4.png"
 import loljatemplate1 from "../../assets/images/loljatemplateimage1.png"
 import loljatemplate2 from "../../assets/images/loljatemplateimage2.png"
 import loljatemplate3 from "../../assets/images/loljatemplateimage3.png"
@@ -15,7 +19,7 @@ export const Projects = () => {
     <ContentLimiter>
       <Card.Background>
         <Card.TitleLink
-          title={"Lolja - Réplica de Template"}
+          title={"Lolja - Réplica"}
           href={"https://lolja.xn--gustavocarvalhoportflio-pjc.com.br/"}
         />
         <Card.ImageWrapper
@@ -26,6 +30,21 @@ export const Projects = () => {
             loljatemplate4,
             loljatemplate5,
           ]}
+        ></Card.ImageWrapper>
+      </Card.Background>
+      <Card.Background>
+        <Card.TitleLink
+          title={"Guess The Word - Game"}
+          href={"https://codenames-web.xn--gustavocarvalhoportflio-pjc.com.br/"}
+        />
+        <Card.ImageWrapper
+          imagesList={[
+            codenamesImage4,
+            codenamesImage2,
+            codenamesImage1,
+            codenamesImage3,
+          ]}
+          $bordercolor={"violet"}
         ></Card.ImageWrapper>
       </Card.Background>
       <Card.Background>
