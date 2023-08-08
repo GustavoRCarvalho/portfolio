@@ -6,8 +6,7 @@ export const AboutHome = () => {
       <AboutContainer>
         <AboutTextWrapper>
           <Title>
-            Desenvolvedor front end web e desenvolvedor de aplicações móveis, e
-            péssimo músico.
+            Desenvolvedor front end web e desenvolvedor de aplicações móveis.
           </Title>
           <Description>
             Eu sou um Front End Developer formado em Técnico em Informática.

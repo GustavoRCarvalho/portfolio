@@ -67,7 +67,7 @@ const ContentContainer = styled.div`
   display: ${(props) => props.$showmore};
   flex-direction: column;
   justify-content: space-between;
-  background-color: #7a7a7a80;
+  background-color: #7a7a7ad4;
 
   min-height: 20vh;
   width: calc(100% - 2em);

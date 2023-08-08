@@ -14,9 +14,9 @@ export const Menu = () => {
       <NoStyleLinkRouter to={"/projects"}>
         <MenuItem $isSelected={path === "projects"}>Projetos</MenuItem>
       </NoStyleLinkRouter>
-      <NoStyleLinkRouter to={"/contact"}>
+      {/* <NoStyleLinkRouter to={"/contact"}>
         <MenuItem $isSelected={path === "contact"}>Contato</MenuItem>
-      </NoStyleLinkRouter>
+      </NoStyleLinkRouter> */}
     </ListMenu>
   )
 }
@@ -24,6 +24,7 @@ export const Menu = () => {
 const ListMenu = styled.ul`
   background-color: #242424;
   width: min-content;
+  height: min-content;
 
   border-radius: 2em;
 
@@ -32,7 +33,8 @@ const ListMenu = styled.ul`
   justify-content: center;
   box-shadow: 0px 0px 8px 1px #ffffff2d;
 
-  margin: 1em auto;
+  margin: auto;
+  padding: 1em;
   padding-inline: 2em;
   gap: 2rem;
   overflow: hidden;
@@ -46,19 +48,18 @@ const MenuItem = styled.li`
   display: flex;
   align-items: center;
   text-align: center;
-  height: 40px;
 
   font-size: 0.7em;
   font-weight: 600;
   letter-spacing: 0.08em;
   color: ${(props) => (props.$isSelected ? "#c96bff" : "#fff")};
-  transition: color 200ms;
 
   cursor: pointer;
 
   &:hover {
     color: #c96bff;
   }
+  transition: color 200ms;
 
   @media (prefers-color-scheme: light) {
     color: ${(props) => (props.$isSelected ? "#c96bff" : "#213547")};
