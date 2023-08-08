@@ -1,84 +1,41 @@
-import { Card } from "../Card"
 import { ContentLimiter } from "../Common/ContentLimit"
-import codenamesImage1 from "../../assets/images/codenamesImage1.png"
 import codenamesImage2 from "../../assets/images/codenamesImage2.png"
-import codenamesImage3 from "../../assets/images/codenamesImage3.png"
-import codenamesImage4 from "../../assets/images/codenamesImage4.png"
 import loljatemplate1 from "../../assets/images/loljatemplateimage1.png"
-import loljatemplate2 from "../../assets/images/loljatemplateimage2.png"
-import loljatemplate3 from "../../assets/images/loljatemplateimage3.png"
-import loljatemplate4 from "../../assets/images/loljatemplateimage4.png"
-import loljatemplate5 from "../../assets/images/loljatemplateimage5.png"
 import ecommerceredux1 from "../../assets/images/ecommercereduximage1.png"
-import ecommerceredux2 from "../../assets/images/ecommercereduximage2.png"
-import ecommerceredux3 from "../../assets/images/ecommercereduximage3.png"
-import { AiOutlineGithub, AiOutlineLinkedin } from "react-icons/ai"
+import { NewCard } from "../Card/NewCard"
 
 export const Projects = () => {
   return (
     <ContentLimiter>
-      <Card.Background>
-        <Card.TitleLink
-          title={"Lolja - Réplica"}
-          href={"https://lolja.xn--gustavocarvalhoportflio-pjc.com.br/"}
-        />
-        <Card.ImageWrapper
-          imagesList={[
-            loljatemplate1,
-            loljatemplate2,
-            loljatemplate3,
-            loljatemplate4,
-            loljatemplate5,
-          ]}
-        ></Card.ImageWrapper>
-      </Card.Background>
-      <Card.Background>
-        <Card.TitleLink
-          title={"Guess The Word - Game"}
-          href={"https://codenames-web.xn--gustavocarvalhoportflio-pjc.com.br/"}
-        />
-        <Card.ImageWrapper
-          imagesList={[
-            codenamesImage4,
-            codenamesImage2,
-            codenamesImage1,
-            codenamesImage3,
-          ]}
-          $bordercolor={"violet"}
-        ></Card.ImageWrapper>
-      </Card.Background>
-      <Card.Background>
-        <Card.TitleLink
-          title={"E-Commerce Template - Estudos de Redux"}
-          href={
-            "https://ecommerceredux.xn--gustavocarvalhoportflio-pjc.com.br/roupas/todos"
-          }
-        />
-        <Card.ImageWrapper
-          imagesList={[ecommerceredux1, ecommerceredux2, ecommerceredux3]}
-          $bordercolor={"violet"}
-        ></Card.ImageWrapper>
-      </Card.Background>
-      <Card.GitLinkedin>
-        <Card.Background $backgroundcolor={"#696969"}>
-          <Card.TitleLink
-            color={"#ffffffde"}
-            title={"GitHub"}
-            href={"https://github.com/GustavoRCarvalho"}
-          >
-            <AiOutlineGithub />
-          </Card.TitleLink>
-        </Card.Background>
-        <Card.Background $backgroundcolor={"#1975ff"}>
-          <Card.TitleLink
-            color={"#ffffffde"}
-            title={"Linkedin"}
-            href={"https://www.linkedin.com/in/gustavo-carvalho-0/"}
-          >
-            <AiOutlineLinkedin />
-          </Card.TitleLink>
-        </Card.Background>
-      </Card.GitLinkedin>
+      <NewCard
+        title={"Lolja - Réplica"}
+        about={
+          "Neste projeto, desenvolvi uma réplica completa do famoso e-commerce geek 'https://www.lolja.com.br/' utilizando tecnologias modernas. Combinando React, Styled-Components, React Router, Redux e outras bibliotecas, criei uma experiência de compra imersiva, responsiva e envolvente para os usuários."
+        }
+        href={"https://lolja.xn--gustavocarvalhoportflio-pjc.com.br/"}
+        gitHref={"https://github.com/GustavoRCarvalho/lolja-template"}
+        image={loljatemplate1}
+      />
+      <NewCard
+        title={"Guess The Word - Game"}
+        about={
+          "Para este projeto, recriei o clássico jogo de tabuleiro Codenames em uma versão digital. Para isso as tecnologias usadas foram: React, Vite, Styled-Components, React Router e sockets. O ponto chave desta versão do jogo é a possíbilidade de jogar em uma única tela."
+        }
+        href={"https://codenames-web.xn--gustavocarvalhoportflio-pjc.com.br/"}
+        gitHref={"https://github.com/GustavoRCarvalho/codenames-web"}
+        image={codenamesImage2}
+      />
+      <NewCard
+        title={"E-Commerce Template - Estudos de Redux"}
+        about={
+          "Um estudo de redux utilizando um template de E-commerce. Utilizando as tecnologias React, Styled-Components, React Router dentre outras biblitecas. Confira no link abaixo."
+        }
+        href={
+          "https://ecommerceredux.xn--gustavocarvalhoportflio-pjc.com.br/roupas/todos"
+        }
+        gitHref={"https://github.com/GustavoRCarvalho/loja-redux"}
+        image={ecommerceredux1}
+      />
     </ContentLimiter>
   )
 }

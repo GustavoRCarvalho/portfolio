@@ -1,4 +1,6 @@
 body {
+  --color: #fff;
+  --bg-color: #242424;
   margin: 0;
   font-family: "Roboto";
   color: #ffffffde;
@@ -14,7 +16,9 @@ body {
 
 @media (prefers-color-scheme: light) {
   body {
-    color: #383838;
+    --bg-color: #ffffff;
+    --color: #000;
+    color: #1f1f1f;
     background-color: #ffffff;
   }
 }
