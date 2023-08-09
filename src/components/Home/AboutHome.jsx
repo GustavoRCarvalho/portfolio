@@ -1,34 +1,31 @@
 import { styled } from "styled-components"
+import { ContentLimiter } from "../Common/ContentLimit"
 
 export const AboutHome = () => {
   return (
-    <>
-      <AboutContainer>
-        <AboutTextWrapper>
-          <Title>
-            Desenvolvedor front end web e desenvolvedor de aplicações móveis.
-          </Title>
-          <Description>
-            Eu sou um Front End Developer formado em Técnico em Informática.
-            Possuo experiência com desenvolvimento web em JS - React e
-            desenvolvimento mobile com Kotlin e React Native. Trabalhei em times
-            com colaboração de analistas, designs, back ends e QAs, utilizando
-            metodologias ágeis e uma excelente cooperação e organização. Este é
-            meu portfólio onde mostro o que venho desenvolvendo nos últimos
-            anos.
-          </Description>
-        </AboutTextWrapper>
-        <AboutImage />
-      </AboutContainer>
-    </>
+    <AboutContainer>
+      <AboutTextWrapper>
+        <Title>
+          Desenvolvedor front end web e desenvolvedor de aplicações móveis.
+        </Title>
+        <Description>
+          Eu sou um Front End Developer formado em Técnico em Informática.
+          Possuo experiência com desenvolvimento web em JS - React e
+          desenvolvimento mobile com Kotlin e React Native. Trabalhei em times
+          com colaboração de analistas, designs, back ends e QAs, utilizando
+          metodologias ágeis e uma excelente cooperação e organização. Este é
+          meu portfólio onde mostro o que venho desenvolvendo nos últimos anos.
+        </Description>
+      </AboutTextWrapper>
+      <AboutImage />
+    </AboutContainer>
   )
 }
 
-const AboutContainer = styled.div`
+const AboutContainer = styled(ContentLimiter)`
   display: flex;
 
   justify-content: space-between;
-  width: 100%;
 
   @media screen and (max-width: 768px) {
     flex-direction: column-reverse;

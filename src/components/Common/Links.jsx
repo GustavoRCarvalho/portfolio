@@ -1,5 +1,6 @@
 import { styled } from "styled-components"
 import { Git, Linkedin } from "../Common/Icons"
+import { ContentLimiter } from "./ContentLimit"
 
 export const Links = () => {
   return (
@@ -9,8 +10,6 @@ export const Links = () => {
     </LinksContainer>
   )
 }
-const LinksContainer = styled.div`
+const LinksContainer = styled(ContentLimiter)`
   display: flex;
-
-  width: 100%;
 `

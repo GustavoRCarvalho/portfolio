@@ -5,6 +5,7 @@ body {
   font-family: "Roboto";
   color: #ffffffde;
   background-color: #242424;
+  overflow-x: hidden;
 
   @media screen and (min-width: 1440px) {
     font-size: large;
