@@ -63,6 +63,7 @@ const TechnologiesBackground = styled.div`
   justify-content: center;
 
   width: 100vw;
+  margin-top: 2em;
 `
 const TechnologiesContainer = styled(ContentLimiter)`
   display: flex;
