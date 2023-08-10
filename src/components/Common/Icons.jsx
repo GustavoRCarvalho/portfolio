@@ -13,6 +13,23 @@ import {
   FaGithubSquare,
 } from "react-icons/fa"
 import { styled } from "styled-components"
+import { motion } from "framer-motion"
+import { useSelector } from "react-redux"
+
+const heightValue = "7em"
+const widthValue = "7em"
+const delayValue = 2
+const durationValue = 0.5
+
+const GitIcon = styled(AiOutlineGithub)`
+  width: 2em;
+  height: 2em;
+`
+
+const LinkedIcon = styled(AiOutlineLinkedin)`
+  width: 2em;
+  height: 2em;
+`
 
 const NoStyleLink = styled.a`
   text-decoration: none;
@@ -39,79 +56,95 @@ export const Git = () => (
   </NoStyleLink>
 )
 
-export const ReactIcon = styled(FaReact)`
-  color: ${(props) => (props.theme.colorized ? "#149eca" : "#ddd")};
-  width: 7em;
-  height: 7em;
-`
-export const HtmlIcon = styled(FaHtml5)`
-  color: ${(props) => (props.theme.colorized ? "#e34c26" : "#ddd")};
-  width: 7em;
-  height: 7em;
-`
-export const CssIcon = styled(FaCss3Alt)`
-  color: ${(props) => (props.theme.colorized ? "#264de4" : "#ddd")};
-  width: 7em;
-  height: 7em;
-`
-export const JsIcon = styled(FaJsSquare)`
-  color: ${(props) => (props.theme.colorized ? "#f0db4f" : "#ddd")};
-  width: 7em;
-  height: 7em;
-`
-export const NodeIcon = styled(FaNodeJs)`
-  color: ${(props) => (props.theme.colorized ? "#68a063" : "#ddd")};
-  width: 7em;
-  height: 7em;
-`
-export const GitIcon2 = styled(FaGitAlt)`
-  color: ${(props) => (props.theme.colorized ? "#f34f29" : "#ddd")};
-  width: 7em;
-  height: 7em;
-`
-export const GithubIcon = styled(FaGithubSquare)`
-  color: ${(props) => (props.theme.colorized ? "#424242" : "#ddd")};
-  width: 7em;
-  height: 7em;
-`
-export const VscodeIcon = styled(BiLogoVisualStudio)`
-  color: ${(props) => (props.theme.colorized ? "#0078d7" : "#ddd")};
-  width: 7em;
-  height: 7em;
-`
-export const StyledIcon = styled(SiStyledcomponents)`
-  color: ${(props) => (props.theme.colorized ? "#ffbd43" : "#ddd")};
-  width: 7em;
-  height: 7em;
-`
-
-export const ReduxIcon = styled(SiRedux)`
-  color: ${(props) => (props.theme.colorized ? "#764abc" : "#ddd")};
-  width: 7em;
-  height: 7em;
-`
-
-const ImgIcon = styled.img`
-  filter: ${(props) =>
-    props.theme.colorized ? "grayscale(0)" : "grayscale(1)"};
-  width: 7em;
-  height: 7em;
-`
-
 export const ViteIcon = () => {
-  return <ImgIcon src={vite} />
+  const { isColorized } = useSelector((state) => state.color)
+
+  return (
+    <ImgIcon
+      transition={{ duration: durationValue, delay: delayValue }}
+      animate={{
+        filter: isColorized ? "grayscale(0)" : "grayscale(1)",
+      }}
+      src={vite}
+    />
+  )
 }
 
 export const RouterIcon = () => {
-  return <ImgIcon src={router} />
+  const { isColorized } = useSelector((state) => state.color)
+  return (
+    <ImgIcon
+      transition={{ duration: durationValue, delay: delayValue }}
+      animate={{
+        filter: isColorized ? "grayscale(0)" : "grayscale(1)",
+      }}
+      src={router}
+    />
+  )
 }
 
-const GitIcon = styled(AiOutlineGithub)`
-  width: 2em;
-  height: 2em;
+export const IconMotion = ({ Icon, color }) => {
+  const { isColorized } = useSelector((state) => state.color)
+
+  return (
+    <motion.div
+      transition={{ duration: durationValue, delay: delayValue }}
+      animate={{
+        color: isColorized ? color : "#ddd",
+      }}
+    >
+      <Icon />
+    </motion.div>
+  )
+}
+
+export const ReactIcon = styled(FaReact)`
+  width: ${widthValue};
+  height: ${heightValue};
+`
+export const HtmlIcon = styled(FaHtml5)`
+  width: ${widthValue};
+  height: ${heightValue};
+`
+export const CssIcon = styled(FaCss3Alt)`
+  width: ${widthValue};
+  height: ${heightValue};
+`
+export const JsIcon = styled(FaJsSquare)`
+  width: ${widthValue};
+  height: ${heightValue};
+`
+export const NodeIcon = styled(FaNodeJs)`
+  width: ${widthValue};
+  height: ${heightValue};
+`
+export const GitIcon2 = styled(FaGitAlt)`
+  width: ${widthValue};
+  height: ${heightValue};
+`
+export const GithubIcon = styled(FaGithubSquare)`
+  width: ${widthValue};
+  height: ${heightValue};
+`
+export const VscodeIcon = styled(BiLogoVisualStudio)`
+  width: ${widthValue};
+  height: ${heightValue};
+`
+export const StyledIcon = styled(SiStyledcomponents)`
+  width: ${widthValue};
+  height: ${heightValue};
 `
 
-const LinkedIcon = styled(AiOutlineLinkedin)`
-  width: 2em;
-  height: 2em;
+export const ReduxIcon = styled(SiRedux)`
+  width: ${widthValue};
+  height: ${heightValue};
+`
+
+const ImgIcon = styled(motion.img)`
+  width: ${widthValue};
+  height: ${heightValue};
+
+  filter: grayscale(1);
+
+  -webkit-user-drag: none;
 `
