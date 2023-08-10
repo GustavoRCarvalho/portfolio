@@ -1,5 +1,6 @@
 import { styled } from "styled-components"
 import { ContentLimiter } from "../Common/ContentLimit"
+import facePhoto from "../../assets/images/1669344622565quadrada.jpg"
 
 export const AboutHome = () => {
   return (
@@ -17,7 +18,7 @@ export const AboutHome = () => {
           meu portfólio onde mostro o que venho desenvolvendo nos últimos anos.
         </Description>
       </AboutTextWrapper>
-      <AboutImage />
+      <AboutImage src={facePhoto} />
     </AboutContainer>
   )
 }

@@ -3,6 +3,7 @@ import { styled } from "styled-components"
 import { ContentLimiter } from "../Common/ContentLimit"
 import {
   CssIcon,
+  FigmaIcon,
   GitIcon2,
   GithubIcon,
   HtmlIcon,
@@ -24,13 +25,14 @@ const listTech = [
   { Icon: CssIcon, color: "#264de4", label: "CSS" },
   { Icon: JsIcon, color: "#f0db4f", label: "JS" },
   { Icon: NodeIcon, color: "#68a063", label: "NODE" },
+  { Icon: RouterIcon, color: "", label: "REACT ROUTER" },
+  { Icon: ReduxIcon, color: "#764abc", label: "REACT REDUX" },
+  { Icon: StyledIcon, color: "#ffbd43", label: "STYLED COMPONENTS" },
   { Icon: GitIcon2, color: "#f34f29", label: "GIT" },
   { Icon: GithubIcon, color: "#424242", label: "GITHUB" },
   { Icon: VscodeIcon, color: "#0078d7", label: "VSCODE" },
-  { Icon: StyledIcon, color: "#ffbd43", label: "STYLED COMPONENTS" },
-  { Icon: RouterIcon, color: "", label: "REACT ROUTER" },
-  { Icon: ReduxIcon, color: "#764abc", label: "REACT REDUX" },
   { Icon: ViteIcon, color: "", label: "VITE" },
+  { Icon: FigmaIcon, color: "", label: "FIGMA" },
 ]
 
 export const Technologies = () => {

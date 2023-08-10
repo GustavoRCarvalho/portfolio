@@ -2,6 +2,7 @@ import { AiOutlineGithub, AiOutlineLinkedin } from "react-icons/ai"
 import { SiStyledcomponents, SiRedux } from "react-icons/si"
 import vite from "../../assets/icons/vite-js-logo.svg"
 import router from "../../assets/icons/react-router-mark-color.svg"
+import figma from "../../assets/icons/figma_logo.svg"
 import { BiLogoVisualStudio } from "react-icons/bi"
 import {
   FaReact,
@@ -56,6 +57,19 @@ export const Git = () => (
   </NoStyleLink>
 )
 
+export const FigmaIcon = () => {
+  const { isColorized } = useSelector((state) => state.color)
+
+  return (
+    <ImgIcon
+      transition={{ duration: durationValue, delay: delayValue }}
+      animate={{
+        filter: isColorized ? "grayscale(0)" : "grayscale(1)",
+      }}
+      src={figma}
+    />
+  )
+}
 export const ViteIcon = () => {
   const { isColorized } = useSelector((state) => state.color)
 
