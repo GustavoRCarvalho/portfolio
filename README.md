@@ -1,5 +1,8 @@
 # Portfólio
 
+Acesse: [Shopping List](https://shopping-list.xn--gustavocarvalhoportflio-pjc.com.br/list/lista%201)
+Este site está hospedado na plataforma Amazon Amplify.
+
 Bem-vindo ao meu projeto de Portfólio pessoal! Este é o lugar onde compartilho minhas conquistas, projetos e habilidades como desenvolvedor. Desenvolvido com um conjunto de tecnologias modernas, incluindo React, React Router, Styled Components, Framer Motion e React Icons, este portfólio não apenas apresenta meu trabalho, mas também demonstra minha paixão por criar interfaces dinâmicas e envolventes.
 
 ## Tecnologias Utilizadas
