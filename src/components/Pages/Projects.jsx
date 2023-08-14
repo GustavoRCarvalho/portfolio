@@ -1,6 +1,7 @@
 import { ContentLimiter } from "../Common/ContentLimit"
 import codenamesImage2 from "../../assets/images/codenamesImage2.png"
 import loljatemplate1 from "../../assets/images/loljatemplateimage1.png"
+import shoppinglist1 from "../../assets/images/shopping-list1.png"
 import ecommerceredux1 from "../../assets/images/ecommercereduximage1.png"
 import { NewCard } from "../Card/NewCard"
 import { styled } from "styled-components"
@@ -27,6 +28,17 @@ export const Projects = () => {
           href={"https://codenames-web.xn--gustavocarvalhoportflio-pjc.com.br/"}
           gitHref={"https://github.com/GustavoRCarvalho/codenames-web"}
           image={codenamesImage2}
+        />
+        <NewCard
+          title={"Shopping List - Estudos"}
+          about={
+            "Neste projeto, desenvolvi um site de criação, organização e compartilhamento de listas utilizando tecnologias modernas. Combinando React + Vite, Styled-Components, React Router e outras bibliotecas."
+          }
+          href={
+            "https://shopping-list.xn--gustavocarvalhoportflio-pjc.com.br/list/lista%201"
+          }
+          gitHref={"https://github.com/GustavoRCarvalho/shopping-list"}
+          image={shoppinglist1}
         />
         <NewCard
           title={"E-Commerce Template - Estudos de Redux"}
