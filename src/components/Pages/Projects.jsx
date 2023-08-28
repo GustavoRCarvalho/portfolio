@@ -16,7 +16,7 @@ export const Projects = () => {
           about={
             "Neste projeto, desenvolvi uma réplica completa do famoso e-commerce geek 'https://www.lolja.com.br/' utilizando tecnologias modernas. Combinando React, Styled-Components, React Router, Redux e outras bibliotecas, criei uma experiência de compra imersiva, responsiva e envolvente para os usuários."
           }
-          href={"https://lolja.xn--gustavocarvalhoportflio-pjc.com.br/"}
+          href={"https://lolja.gustavocarvalho.dev.br/"}
           gitHref={"https://github.com/GustavoRCarvalho/lolja-template"}
           image={loljatemplate1}
         />
@@ -25,7 +25,7 @@ export const Projects = () => {
           about={
             "Para este projeto, recriei o clássico jogo de tabuleiro Codenames em uma versão digital. Para isso as tecnologias usadas foram: React, Vite, Styled-Components, React Router e sockets. O ponto chave desta versão do jogo é a possíbilidade de jogar em uma única tela."
           }
-          href={"https://codenames-web.xn--gustavocarvalhoportflio-pjc.com.br/"}
+          href={"https://guesstheword.gustavocarvalho.dev.br/"}
           gitHref={"https://github.com/GustavoRCarvalho/codenames-web"}
           image={codenamesImage2}
         />
@@ -34,9 +34,7 @@ export const Projects = () => {
           about={
             "Neste projeto, desenvolvi um site de criação, organização e compartilhamento de listas utilizando tecnologias modernas. Combinando React + Vite, Styled-Components, React Router e outras bibliotecas."
           }
-          href={
-            "https://shopping-list.xn--gustavocarvalhoportflio-pjc.com.br/list/lista%201"
-          }
+          href={"https://shopping-list.gustavocarvalho.dev.br/list/lista%201"}
           gitHref={"https://github.com/GustavoRCarvalho/shopping-list"}
           image={shoppinglist1}
         />
@@ -45,9 +43,7 @@ export const Projects = () => {
           about={
             "Um estudo de redux utilizando um template de E-commerce. Utilizando as tecnologias React, Styled-Components, React Router dentre outras biblitecas. Confira no link abaixo."
           }
-          href={
-            "https://ecommerceredux.xn--gustavocarvalhoportflio-pjc.com.br/roupas/todos"
-          }
+          href={"https://ecommerceredux.gustavocarvalho.dev.br/roupas/todos"}
           gitHref={"https://github.com/GustavoRCarvalho/loja-redux"}
           image={ecommerceredux1}
         />
