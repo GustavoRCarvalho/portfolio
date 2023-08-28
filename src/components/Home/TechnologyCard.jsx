@@ -7,7 +7,6 @@ export const TechnologyCard = ({ delay, children }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: delay }}
-      drag
     >
       {children}
     </Card>
@@ -32,8 +31,6 @@ const Card = styled(motion.div)`
   margin-block: 1em;
   margin-right: 1em;
   box-shadow: 0px 35px 120px -15px #1f1f1f;
-
-  cursor: grab;
 
   @media screen and (max-width: 390px) {
     width: 10em;
