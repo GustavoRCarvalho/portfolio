@@ -76,7 +76,7 @@ const CardContainer = styled(motion.div)`
   padding: 0;
 
   flex-wrap: wrap;
-  @media screen and (max-width: 390px) {
+  @media screen and (max-width: 678px) {
     justify-content: center;
   }
 `
