@@ -15,10 +15,14 @@ export const TechnologyCard = ({ item, delay, children }) => {
       onHoverEnd={() => setOnHover(false)}
     >
       <CommonIcon onHover={onHover} Icon={item.Icon} color={item.color} />
-      {item.label}
+      <CardSpan>{item.label}</CardSpan>
     </Card>
   )
 }
+
+const CardSpan = styled.span`
+  user-select: none;
+`
 
 const Card = styled(motion.div)`
   background-color: var(--bg-color);
