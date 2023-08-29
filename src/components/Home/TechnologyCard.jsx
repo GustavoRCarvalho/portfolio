@@ -1,14 +1,21 @@
 import { motion } from "framer-motion"
 import { styled } from "styled-components"
+import { CommonIcon } from "../Common/Icons"
+import { useState } from "react"
 
-export const TechnologyCard = ({ delay, children }) => {
+export const TechnologyCard = ({ item, delay, children }) => {
+  const [onHover, setOnHover] = useState(false)
+
   return (
     <Card
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: delay }}
+      onHoverStart={() => setOnHover(true)}
+      onHoverEnd={() => setOnHover(false)}
     >
-      {children}
+      <CommonIcon onHover={onHover} Icon={item.Icon} color={item.color} />
+      {item.label}
     </Card>
   )
 }

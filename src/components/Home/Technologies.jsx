@@ -1,38 +1,34 @@
 import { motion } from "framer-motion"
 import { styled } from "styled-components"
 import { ContentLimiter } from "../Common/ContentLimit"
+import { FigmaIcon, RouterIcon, ViteIcon } from "../Common/Icons"
 import {
-  CssIcon,
-  FigmaIcon,
-  GitIcon2,
-  GithubIcon,
-  HtmlIcon,
-  IconMotion,
-  JsIcon,
-  NodeIcon,
-  ReactIcon,
-  ReduxIcon,
-  RouterIcon,
-  StyledIcon,
-  ViteIcon,
-  VscodeIcon,
-} from "../Common/Icons"
+  FaReact,
+  FaHtml5,
+  FaCss3Alt,
+  FaJsSquare,
+  FaNodeJs,
+  FaGitAlt,
+  FaGithubSquare,
+} from "react-icons/fa"
+import { BiLogoVisualStudio } from "react-icons/bi"
+import { SiStyledcomponents, SiRedux } from "react-icons/si"
 import { TechnologyCard } from "./TechnologyCard"
 
 const listTech = [
-  { Icon: ReactIcon, color: "#149eca", label: "REACT" },
-  { Icon: HtmlIcon, color: "#e34c26", label: "HTML" },
-  { Icon: CssIcon, color: "#264de4", label: "CSS" },
-  { Icon: JsIcon, color: "#f0db4f", label: "JS" },
-  { Icon: NodeIcon, color: "#68a063", label: "NODE" },
-  { Icon: RouterIcon, color: "", label: "REACT ROUTER" },
-  { Icon: ReduxIcon, color: "#764abc", label: "REACT REDUX" },
-  { Icon: StyledIcon, color: "#ffbd43", label: "STYLED COMPONENTS" },
-  { Icon: GitIcon2, color: "#f34f29", label: "GIT" },
-  { Icon: GithubIcon, color: "#424242", label: "GITHUB" },
-  { Icon: VscodeIcon, color: "#0078d7", label: "VSCODE" },
-  { Icon: ViteIcon, color: "", label: "VITE" },
-  { Icon: FigmaIcon, color: "", label: "FIGMA" },
+  { Icon: FaReact, color: "#149eca", label: "REACT" },
+  { Icon: FaHtml5, color: "#e34c26", label: "HTML" },
+  { Icon: FaCss3Alt, color: "#264de4", label: "CSS" },
+  { Icon: FaJsSquare, color: "#f0db4f", label: "JS" },
+  { Icon: FaNodeJs, color: "#68a063", label: "NODE" },
+  { Icon: RouterIcon, color: "#f10a0a", label: "REACT ROUTER" },
+  { Icon: SiRedux, color: "#764abc", label: "REACT REDUX" },
+  { Icon: SiStyledcomponents, color: "#ffbd43", label: "STYLED COMPONENTS" },
+  { Icon: FaGitAlt, color: "#f34f29", label: "GIT" },
+  { Icon: FaGithubSquare, color: "#424242", label: "GITHUB" },
+  { Icon: BiLogoVisualStudio, color: "#0078d7", label: "VSCODE" },
+  { Icon: ViteIcon, color: "#9c19f3", label: "VITE" },
+  { Icon: FigmaIcon, color: "#f87509", label: "FIGMA" },
 ]
 
 export const Technologies = () => {
@@ -43,14 +39,11 @@ export const Technologies = () => {
         <CardContainer>
           {listTech.map((item, index) => {
             return (
-              <TechnologyCard key={item.label} delay={index * 0.15}>
-                {item.color !== "" ? (
-                  <IconMotion Icon={item.Icon} color={item.color} />
-                ) : (
-                  <item.Icon />
-                )}
-                {item.label}
-              </TechnologyCard>
+              <TechnologyCard
+                item={item}
+                key={item.label}
+                delay={index * 0.15}
+              />
             )
           })}
         </CardContainer>
