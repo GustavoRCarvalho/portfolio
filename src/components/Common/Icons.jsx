@@ -59,6 +59,7 @@ export const ImageIcon = ({ src }) => {
   return (
     <ImgIcon
       transition={{ duration: durationValue, delay: delayValue }}
+      initial={{ filter: "grayscale(1)" }}
       animate={{
         filter: isColorized ? "grayscale(0)" : "grayscale(1)",
       }}
@@ -102,8 +103,6 @@ const CommonIconContainer = styled(motion.div)`
 const ImgIcon = styled(motion.img)`
   width: ${widthValue};
   height: ${heightValue};
-
-  filter: grayscale(1);
 
   -webkit-user-drag: none;
 `
