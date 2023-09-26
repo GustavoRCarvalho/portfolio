@@ -1,6 +1,7 @@
 import { ContentLimiter } from "../Common/ContentLimit"
 import codenamesImage2 from "../../assets/images/codenamesImage2.png"
 import loljatemplate1 from "../../assets/images/loljatemplateimage1.png"
+import loginImage1 from "../../assets/images/loginImage1.png"
 import shoppinglist1 from "../../assets/images/shopping-list1.png"
 import ecommerceredux1 from "../../assets/images/ecommercereduximage1.png"
 import { NewCard } from "../Card/NewCard"
@@ -19,6 +20,15 @@ export const Projects = () => {
           href={"https://lolja.gustavocarvalho.dev.br/"}
           gitHref={"https://github.com/GustavoRCarvalho/lolja-template"}
           image={loljatemplate1}
+        />
+        <NewCard
+          title={"Logins Animate"}
+          about={
+            "Um projeto para testar designs inovadores, aplicar estilos e tecnologias atuais em simples telas de logins. Convido a visitar essa sequencia de logins e experimentar os designs que desenvolvi."
+          }
+          href={"https://loginanimate.gustavocarvalho.dev.br/"}
+          gitHref={"https://github.com/GustavoRCarvalho/login-animate"}
+          image={loginImage1}
         />
         <NewCard
           title={"Guess The Word - Game"}
