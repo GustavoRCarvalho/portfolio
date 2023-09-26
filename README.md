@@ -1,6 +1,6 @@
 # Portfólio
 
-Acesse: [Portfolio](https://portfolio.xn--gustavocarvalhoportflio-pjc.com.br/) <br />
+Acesse: [Portfolio](https://portfolio.gustavocarvalho.dev.br/) <br />
 Este site está hospedado na plataforma Amazon Amplify.
 
 Bem-vindo ao meu projeto de Portfólio pessoal! Este é o lugar onde compartilho minhas conquistas, projetos e habilidades como desenvolvedor. Desenvolvido com um conjunto de tecnologias modernas, incluindo React, React Router, Styled Components, Framer Motion e React Icons, este portfólio não apenas apresenta meu trabalho, mas também demonstra minha paixão por criar interfaces dinâmicas e envolventes.
@@ -27,7 +27,7 @@ Bem-vindo ao meu projeto de Portfólio pessoal! Este é o lugar onde compartilho
 
 1. Clone este repositório: `git clone https://github.com/GustavoRCarvalho/portfolio.git`
 2. Instale as dependências: `npm install`
-3. Inicie o servidor de desenvolvimento: `npm run dev`
+3. Inicie o servidor de desenvolvimento: `npm start`
 4. Acesse o aplicativo em seu navegador: `http://localhost:3000`
 
 ## Contribuições
