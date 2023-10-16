@@ -11,6 +11,7 @@ import { LayoutGroup } from "framer-motion"
 export const Projects = () => {
   return (
     <ContentLimiter>
+      <TechnologiesTitle>Projetos</TechnologiesTitle>
       <CardContainer>
         <NewCard
           title={"Lolja - Réplica"}
@@ -63,3 +64,8 @@ export const Projects = () => {
 }
 
 const CardContainer = styled(LayoutGroup)``
+
+const TechnologiesTitle = styled.h2`
+  color: var(--color);
+  margin-block: 1em;
+`

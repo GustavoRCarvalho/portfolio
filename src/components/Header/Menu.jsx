@@ -1,18 +1,17 @@
-import { useLocation } from "react-router-dom"
 import { styled } from "styled-components"
 import { NoStyleLinkRouter } from "../Common/NoStyleLinkRouter"
 
 export const Menu = () => {
-  const { pathname } = useLocation()
-  const path = pathname.split("/")[1]
-
   return (
     <ListMenu>
-      <NoStyleLinkRouter to={"/"}>
-        <MenuItem $isSelected={path === ""}>Início</MenuItem>
+      <NoStyleLinkRouter to={""}>
+        <MenuItem>Início</MenuItem>
       </NoStyleLinkRouter>
-      <NoStyleLinkRouter to={"/projects"}>
-        <MenuItem $isSelected={path === "projects"}>Projetos</MenuItem>
+      <NoStyleLinkRouter to={"projects"}>
+        <MenuItem>Projetos</MenuItem>
+      </NoStyleLinkRouter>
+      <NoStyleLinkRouter to={"tecnologies"}>
+        <MenuItem>Tecnologias</MenuItem>
       </NoStyleLinkRouter>
       {/* <NoStyleLinkRouter to={"/contact"}>
         <MenuItem $isSelected={path === "contact"}>Contato</MenuItem>
@@ -52,7 +51,7 @@ const MenuItem = styled.li`
   font-size: 0.7em;
   font-weight: 600;
   letter-spacing: 0.08em;
-  color: ${(props) => (props.$isSelected ? "#c96bff" : "#fff")};
+  color: #fff;
 
   cursor: pointer;
 

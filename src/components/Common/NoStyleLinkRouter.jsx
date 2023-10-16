@@ -1,12 +1,13 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-scroll"
 import styled from "styled-components"
 
 export const NoStyleLinkRouter = (props) => {
   return (
     <NoStyleLink
-      onClick={() => {
-        window.scrollTo(0, 0)
-      }}
+      duration={500}
+      smooth={true}
+      spy={true}
+      offset={-50}
       {...props}
     >
       {props.children}

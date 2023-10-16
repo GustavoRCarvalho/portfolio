@@ -59,6 +59,8 @@ const TechnologiesBackground = styled.div`
 
   width: 100vw;
   margin-top: 2em;
+  padding-top: 1em;
+  padding-bottom: 3em;
 `
 const TechnologiesContainer = styled(ContentLimiter)`
   display: flex;
