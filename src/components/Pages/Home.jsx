@@ -4,6 +4,7 @@ import { Links } from "../Common/Links"
 import { Technologies } from "../Home/Technologies"
 import { Projects } from "./Projects"
 import { Element } from "react-scroll"
+import { Contact } from "./Contact"
 export const Home = () => {
   return (
     <HomeContainer id="containerElement">
@@ -16,6 +17,9 @@ export const Home = () => {
       </Element>
       <Element name="tecnologies" className="element">
         <Technologies />
+      </Element>
+      <Element name="contact" className="element">
+        <Contact />
       </Element>
     </HomeContainer>
   )

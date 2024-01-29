@@ -13,6 +13,9 @@ export const Menu = () => {
       <NoStyleLinkRouter to={"tecnologies"}>
         <MenuItem>Tecnologias</MenuItem>
       </NoStyleLinkRouter>
+      <NoStyleLinkRouter to={"contact"}>
+        <MenuItem>Contato</MenuItem>
+      </NoStyleLinkRouter>
       {/* <NoStyleLinkRouter to={"/contact"}>
         <MenuItem $isSelected={path === "contact"}>Contato</MenuItem>
       </NoStyleLinkRouter> */}
