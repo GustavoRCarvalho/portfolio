@@ -4,7 +4,6 @@ import router from "../../assets/icons/react-router-mark-color.svg"
 import figma from "../../assets/icons/figma_logo.svg"
 import { styled } from "styled-components"
 import { motion } from "framer-motion"
-import { useSelector } from "react-redux"
 
 const GitIcon = styled(AiOutlineGithub)`
   width: 2em;
@@ -53,42 +52,25 @@ const IconsProperties = (props) => `
     transition: filter 250ms;
     `
 
-export const ImageIcon = ({ src }) => {
-  const { isColorized } = useSelector((state) => state.color)
-
-  return (
-    <ImgIcon
-      transition={{ duration: durationValue, delay: delayValue }}
-      initial={{ filter: "grayscale(1)" }}
-      animate={{
-        filter: isColorized ? "grayscale(0)" : "grayscale(1)",
-      }}
-      src={src}
-    />
-  )
-}
-
 export const FigmaIcon = () => {
-  return <ImageIcon src={figma} />
+  return <img alt="Icone" src={figma} />
 }
 
 export const ViteIcon = () => {
-  return <ImageIcon src={vite} />
+  return <img alt="Icone" src={vite} />
 }
 
 export const RouterIcon = () => {
-  return <ImageIcon src={router} />
+  return <img alt="Icone" src={router} />
 }
 
 export const CommonIcon = ({ onHover, Icon, color }) => {
-  const { isColorized } = useSelector((state) => state.color)
-
   return (
     <CommonIconContainer
       $onHover={onHover}
       transition={{ duration: durationValue, delay: delayValue }}
       animate={{
-        color: isColorized ? color : "#ddd",
+        color: color,
       }}
     >
       <Icon style={{ width: widthValue, height: heightValue }} />
@@ -98,11 +80,4 @@ export const CommonIcon = ({ onHover, Icon, color }) => {
 
 const CommonIconContainer = styled(motion.div)`
   ${(props) => IconsProperties(props)}
-`
-
-const ImgIcon = styled(motion.img)`
-  width: ${widthValue};
-  height: ${heightValue};
-
-  -webkit-user-drag: none;
 `

@@ -1,17 +1,12 @@
 import { styled } from "styled-components"
-import { AiOutlineLink } from "react-icons/ai"
 import { AiOutlineGithub } from "react-icons/ai"
 
-export const About = ({ showMore, about, href, gitHref }) => {
+export const About = ({ about, gitHref }) => {
   return (
-    <ContentContainer $showmore={showMore ? "flex" : "none"}>
+    <ContentContainer>
       <ContentAbout>{about}</ContentAbout>
       <ButtonsWrapper>
-        <VisitButton href={href}>
-          <LinkIcon />
-          Acesse
-        </VisitButton>
-        <VisitButton href={gitHref}>
+        <VisitButton href={gitHref} target="_blank">
           <GitIcon />
           Repositório
         </VisitButton>
@@ -20,11 +15,6 @@ export const About = ({ showMore, about, href, gitHref }) => {
   )
 }
 
-const LinkIcon = styled(AiOutlineLink)`
-  width: 2em;
-  height: 2em;
-  margin-right: 0.5em;
-`
 const GitIcon = styled(AiOutlineGithub)`
   width: 2em;
   height: 2em;
@@ -33,11 +23,11 @@ const GitIcon = styled(AiOutlineGithub)`
 
 const ButtonsWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 `
 
 const VisitButton = styled.a`
-  background-color: var(--bg-color);
+  background-color: #161616;
   color: var(--color);
 
   font-size: 1em;
@@ -50,7 +40,6 @@ const VisitButton = styled.a`
 
   border-radius: 0.5em;
 
-  margin: 0.5em;
   padding-block: 0.5em;
   padding-inline: 1em;
 
@@ -58,29 +47,23 @@ const VisitButton = styled.a`
 `
 
 const ContentAbout = styled.p`
-  width: 70%;
-
-  margin: 1em 0 0 0;
+  margin: 0;
 `
 
 const ContentContainer = styled.div`
-  display: ${(props) => props.$showmore};
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #7a7a7ad4;
 
-  min-height: 20vh;
-  width: calc(100% - 2em);
+  width: calc(100% - 2.4em);
+  min-height: 10em;
 
-  padding: 1em;
+  padding-inline: 1.2em;
+  padding-bottom: 1.2em;
 
   z-index: 1;
 
   transition: display 500ms;
 
   cursor: default;
-
-  @media (prefers-color-scheme: light) {
-    background-color: #f0f0f0a0;
-  }
 `

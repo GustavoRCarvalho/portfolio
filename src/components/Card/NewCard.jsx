@@ -1,90 +1,81 @@
-import { useState } from "react"
 import { styled } from "styled-components"
-import { motion } from "framer-motion"
 import { About } from "./About"
 
 export const NewCard = ({ title, about, href, gitHref, image }) => {
-  const [showMore, setShowMore] = useState(false)
-  const [hover, setHover] = useState(false)
-
   return (
-    <CardContainer layout>
-      <CardImage
-        $hover={hover}
-        $showmore={showMore}
-        img={image}
-        onClick={() => setShowMore((value) => !value)}
-      />
-      <Title
-        onHoverStart={() => setHover(true)}
-        onHoverEnd={() => setHover(false)}
-        layout="position"
-        onClick={() => setShowMore((value) => !value)}
-      >
-        {title}
-      </Title>
-      <About gitHref={gitHref} href={href} showMore={showMore} about={about} />
+    <CardContainer>
+      <CardImage $img={image} onClick={() => window.open(href, "_blank")} />
+      <DescriptionWrapper>
+        <Title onClick={() => window.open(href, "_blank")}>{title}</Title>
+        <About gitHref={gitHref} about={about} />
+      </DescriptionWrapper>
     </CardContainer>
   )
 }
 
-const CardImage = styled(motion.img)`
-  position: absolute;
-  background-image: url(${(props) => props.img});
+const CardImage = styled.img`
+  background-image: url(${(props) => props.$img});
   background-position: center;
   background-color: var(--bg-color);
-  filter: blur(2px)
-    ${(props) =>
-      !props.$showmore
-        ? props.$hover
-          ? "grayscale(0)"
-          : "grayscale(1)"
-        : "grayscale(0)"};
+  background-size: 150%;
 
   height: 100%;
-  width: 100%;
+  width: 101%;
+
+  filter: grayscale(1);
 
   transition: filter 250ms;
 
   &:hover {
-    filter: blur(2px) grayscale(0);
+    filter: grayscale(0);
   }
+  cursor: pointer;
 `
-const CardContainer = styled(motion.div)`
+const CardContainer = styled.div`
   position: relative;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   overflow: hidden;
 
-  box-shadow: 0px 0px 8px 1px #ffffff2d;
-  margin: 1em 1em 5em 1em;
-  border-radius: 1em;
-  min-height: 15vh;
+  box-shadow: 0px 0px 4px 0.5px #ffffff2d;
+  border-radius: 0.5em;
+  width: calc(32%);
+  min-height: 25em;
 
-  cursor: pointer;
+  @media screen and (max-width: 720px) {
+    width: calc(45%);
+  }
+
+  @media screen and (max-width: 520px) {
+    width: calc(100%);
+  }
 `
 
-const Title = styled(motion.h2)`
+const Title = styled.h2`
   color: var(--color);
-  background-color: #0000008b;
   font-size: 1.2em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-  text-align: center;
+  text-align: start;
+
+  width: 100%;
+
+  margin: 0;
   padding: 0.5em;
   padding-inline: 1em;
 
   border-radius: 2em;
-  box-shadow: 0px 0px 8px 4px #0000008b;
-  z-index: 1;
 
-  @media (prefers-color-scheme: light) {
-    background-color: #f0f0f0df;
-    box-shadow: 0px 0px 8px 4px #d1d1d1b0;
-  }
+  cursor: pointer;
+`
+
+const DescriptionWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  align-items: start;
+
+  width: 100%;
 `

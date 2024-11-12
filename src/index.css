@@ -1,8 +1,10 @@
 body {
   --color: #fff;
   --bg-color: #242424;
+  --bg-color-white: rgba(244, 244, 246, 1);
   margin: 0;
-  font-family: "Roboto";
+  font-family: "Jost", serif;
+
   color: #ffffffde;
   background-color: #242424;
   overflow-x: hidden;
@@ -13,10 +15,18 @@ body {
   @media screen and (max-width: 1280px) {
     font-size: small;
   }
+
+  button,
+  input,
+  textarea {
+    font-family: "Jost", serif;
+    font-size: 1em;
+  }
 }
 
 @media (prefers-color-scheme: light) {
   body {
+    --bg-color-white: rgba(244, 244, 246, 1);
     --bg-color: #ffffff;
     --color: #000;
     color: #1f1f1f;

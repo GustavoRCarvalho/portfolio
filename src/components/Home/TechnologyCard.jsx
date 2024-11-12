@@ -1,50 +1,60 @@
-import { motion } from "framer-motion"
 import { styled } from "styled-components"
-import { CommonIcon } from "../Common/Icons"
-import { useState } from "react"
 
-export const TechnologyCard = ({ item, delay, children }) => {
-  const [onHover, setOnHover] = useState(false)
-
+export const TechnologyCard = ({ item: { Icon, color, label } }) => {
   return (
-    <Card
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: delay }}
-      onHoverStart={() => setOnHover(true)}
-      onHoverEnd={() => setOnHover(false)}
-    >
-      <CommonIcon onHover={onHover} Icon={item.Icon} color={item.color} />
-      <CardSpan>{item.label}</CardSpan>
+    <Card $color={color}>
+      <Icon />
+      {/* <CommonIcon onHover={onHover} Icon={Icon} color={color} /> */}
+      <CardSpan>{label}</CardSpan>
     </Card>
   )
 }
 
 const CardSpan = styled.span`
-  user-select: none;
+  color: #000;
 `
 
-const Card = styled(motion.div)`
-  background-color: var(--bg-color);
+const Card = styled.div`
+  background-color: var(--bg-color-white);
 
   display: flex;
-  flex-direction: column;
+  gap: 1em;
+
+  width: calc(33% - 2.8em);
 
   align-items: center;
-  justify-content: space-around;
+  justify-content: start;
 
   text-align: center;
 
-  width: 13em;
-  height: 13em;
+  padding: 1em;
 
-  border-radius: 1em;
+  border-radius: 0.5em;
   margin-block: 1em;
   margin-right: 1em;
-  box-shadow: 0px 35px 120px -15px #1f1f1f;
-
-  @media screen and (max-width: 390px) {
-    width: 10em;
-    height: 10em;
+  box-shadow: 0px 0px 4px 0.5px #b6b6b6;
+  &:hover {
+    box-shadow: 0px 0px 4px 0.5px ${(props) => props.$color ?? "#b6b6b6"};
   }
+
+  svg {
+    color: ${(props) => props.$color ?? "inset"};
+  }
+  svg,
+  img {
+    width: 2em;
+    height: 2em;
+    pointer-events: none;
+  }
+
+  transition: box-shadow 200ms;
+
+  @media screen and (max-width: 720px) {
+    width: calc(45% - 2.8em);
+  }
+  @media screen and (max-width: 390px) {
+    width: calc(100%);
+  }
+
+  user-select: none;
 `
