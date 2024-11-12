@@ -1,5 +1,5 @@
 import { styled } from "styled-components"
-import face from "../../assets/images/1669344622565quadrada.jpg"
+import face from "../../assets/images/perfil2.jpg"
 import { NoStyleLinkRouter } from "../Common/NoStyleLinkRouter"
 
 export const ImageHeader = () => {
