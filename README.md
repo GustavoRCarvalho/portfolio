@@ -3,11 +3,11 @@
 Acesse: [Portfolio](https://portfolio.gustavocarvalho.dev.br/) <br />
 Este site está hospedado na plataforma Amazon Amplify.
 
-Bem-vindo ao meu projeto de Portfólio pessoal! Este é o lugar onde compartilho minhas conquistas, projetos e habilidades como desenvolvedor. Desenvolvido com um conjunto de tecnologias modernas, incluindo React, React Router, Styled Components, Framer Motion e React Icons, este portfólio não apenas apresenta meu trabalho, mas também demonstra minha paixão por criar interfaces dinâmicas e envolventes.
+Bem-vindo ao meu projeto de Portfólio pessoal! Este é o lugar onde compartilho minhas conquistas, projetos e habilidades como desenvolvedor. Desenvolvido com um conjunto de tecnologias modernas, incluindo React, React Router, Styled Components e React Icons, este portfólio não apenas apresenta meu trabalho, mas também demonstra minha paixão por criar interfaces dinâmicas e envolventes.
 
 ## Tecnologias Utilizadas
 
-### Base: 
+### Base:
 
 [React](https://github.com/facebook/react) <br />
 
@@ -15,9 +15,6 @@ Bem-vindo ao meu projeto de Portfólio pessoal! Este é o lugar onde compartilho
 
 [styled-components](https://github.com/styled-components/styled-components) <br />
 [react-icons](https://github.com/react-icons/react-icons) <br />
-
-### Animações:
-[Framer Motion](https://github.com/framer/motion) <br />
 
 ### Gerenciamento:
 

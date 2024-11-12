@@ -3,8 +3,6 @@ import vite from "../../assets/icons/vite-js-logo.svg"
 import router from "../../assets/icons/react-router-mark-color.svg"
 import figma from "../../assets/icons/figma_logo.svg"
 import { styled } from "styled-components"
-import { motion } from "framer-motion"
-
 const GitIcon = styled(AiOutlineGithub)`
   width: 2em;
   height: 2em;
@@ -40,18 +38,6 @@ export const Git = () => (
   </NoStyleLink>
 )
 
-const heightValue = "7em"
-const widthValue = "7em"
-const delayValue = 2
-const durationValue = 0.5
-
-const IconsProperties = (props) => `
-    width: ${widthValue};
-    height: ${heightValue};
-    ${props.$onHover && "filter: drop-shadow(0 0 5px)"};
-    transition: filter 250ms;
-    `
-
 export const FigmaIcon = () => {
   return <img alt="Icone" src={figma} />
 }
@@ -63,21 +49,3 @@ export const ViteIcon = () => {
 export const RouterIcon = () => {
   return <img alt="Icone" src={router} />
 }
-
-export const CommonIcon = ({ onHover, Icon, color }) => {
-  return (
-    <CommonIconContainer
-      $onHover={onHover}
-      transition={{ duration: durationValue, delay: delayValue }}
-      animate={{
-        color: color,
-      }}
-    >
-      <Icon style={{ width: widthValue, height: heightValue }} />
-    </CommonIconContainer>
-  )
-}
-
-const CommonIconContainer = styled(motion.div)`
-  ${(props) => IconsProperties(props)}
-`

@@ -1,4 +1,3 @@
-import { motion } from "framer-motion"
 import { styled } from "styled-components"
 import { ContentLimiter } from "../Common/ContentLimit"
 import { FigmaIcon, RouterIcon, ViteIcon } from "../Common/Icons"
@@ -126,7 +125,7 @@ const TechnologiesTitle = styled.h2`
   color: #141414;
 `
 
-const CardContainer = styled(motion.div)`
+const CardContainer = styled.div`
   display: flex;
   justify-content: start;
   padding: 0;

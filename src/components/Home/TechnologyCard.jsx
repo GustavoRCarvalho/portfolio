@@ -4,7 +4,6 @@ export const TechnologyCard = ({ item: { Icon, color, label } }) => {
   return (
     <Card $color={color}>
       <Icon />
-      {/* <CommonIcon onHover={onHover} Icon={Icon} color={color} /> */}
       <CardSpan>{label}</CardSpan>
     </Card>
   )
