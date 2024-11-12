@@ -2,6 +2,7 @@ import { ContentLimiter } from "../Common/ContentLimit"
 import codenamesImage2 from "../../assets/images/codenamesImage2.png"
 import loljatemplate1 from "../../assets/images/loljatemplateimage1.png"
 import loginImage1 from "../../assets/images/loginImage1.png"
+import newdeskprint from "../../assets/images/newdeskprint.png"
 import { NewCard } from "../Card/NewCard"
 import { styled } from "styled-components"
 
@@ -20,11 +21,20 @@ export const Projects = () => {
           image={loljatemplate1}
         />
         <NewCard
-          title={"Logins Animate"}
+          title={"Design Logins"}
           about={"Designs inovadores aplicados em telas de login."}
           href={"https://loginanimate.gustavocarvalho.dev.br/"}
           gitHref={"https://github.com/GustavoRCarvalho/login-animate"}
           image={loginImage1}
+        />
+        <NewCard
+          title={"New Desk"}
+          about={
+            "Crie artigos de forma gratuita e compartilhe com seus colegas."
+          }
+          href={"https://newdesk.gustavocarvalho.dev.br/"}
+          gitHref={"https://github.com/GustavoRCarvalho/newdesk"}
+          image={newdeskprint}
         />
         <NewCard
           title={"Guess The Word - Game"}
