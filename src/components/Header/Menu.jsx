@@ -44,6 +44,11 @@ const ListMenu = styled.ul`
     box-shadow: 0px 0px 8px 1px #00000019;
     background-color: #fff;
   }
+
+  @media (max-width: 500px) {
+    gap: 0.5rem;
+    padding-inline: 1em;
+  }
 `
 
 const MenuItem = styled.li`
@@ -51,7 +56,7 @@ const MenuItem = styled.li`
   align-items: center;
   text-align: center;
 
-  font-size: 0.7em;
+  font-size: 0.8em;
   font-weight: 600;
   letter-spacing: 0.08em;
   color: #fff;
