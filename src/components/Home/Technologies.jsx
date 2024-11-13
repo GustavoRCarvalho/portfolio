@@ -16,30 +16,32 @@ import { TechnologyCard } from "./TechnologyCard"
 import { useState } from "react"
 import { LuAppWindow } from "react-icons/lu"
 
-const listSoft = [
-  { Icon: FaGithubSquare, color: "#424242", label: "Github" },
-  { Icon: BiLogoVisualStudio, color: "#0078d7", label: "VSCode" },
-  { Icon: FigmaIcon, color: "#f87509", label: "Figma" },
-]
+const skills = {
+  Softwares: [
+    { Icon: FaGithubSquare, color: "#424242", label: "Github" },
+    { Icon: BiLogoVisualStudio, color: "#0078d7", label: "VSCode" },
+    { Icon: FigmaIcon, color: "#f87509", label: "Figma" },
+  ],
+  Tecnologias: [
+    { Icon: FaReact, color: "#149eca", label: "React" },
+    { Icon: FaHtml5, color: "#e34c26", label: "HTML" },
+    { Icon: FaCss3Alt, color: "#264de4", label: "CSS" },
+    { Icon: FaJsSquare, color: "#f0db4f", label: "JavaScript" },
+    { Icon: FaNodeJs, color: "#68a063", label: "Node.js" },
+    { Icon: RouterIcon, color: "#f10a0a", label: "React Router" },
+    { Icon: SiRedux, color: "#764abc", label: "React Redux" },
+    { Icon: SiStyledcomponents, color: "#ffbd43", label: "Styled Components" },
+    { Icon: FaGitAlt, color: "#f34f29", label: "Git" },
+    { Icon: ViteIcon, color: "#9c19f3", label: "Vite" },
+  ],
+}
 
-const listTech = [
-  { Icon: FaReact, color: "#149eca", label: "React" },
-  { Icon: FaHtml5, color: "#e34c26", label: "HTML" },
-  { Icon: FaCss3Alt, color: "#264de4", label: "CSS" },
-  { Icon: FaJsSquare, color: "#f0db4f", label: "JavaScript" },
-  { Icon: FaNodeJs, color: "#68a063", label: "Node.js" },
-  { Icon: RouterIcon, color: "#f10a0a", label: "React Router" },
-  { Icon: SiRedux, color: "#764abc", label: "React Redux" },
-  { Icon: SiStyledcomponents, color: "#ffbd43", label: "Styled Components" },
-  { Icon: FaGitAlt, color: "#f34f29", label: "Git" },
-  { Icon: ViteIcon, color: "#9c19f3", label: "Vite" },
+const options = [
+  { Icon: LuAppWindow, title: "Tecnologias" },
+  { Icon: LuAppWindow, title: "Softwares" },
 ]
 
 export const Technologies = () => {
-  const options = [
-    { Icon: LuAppWindow, title: "Tecnologias" },
-    { Icon: LuAppWindow, title: "Softwares" },
-  ]
   const [selected, setSelected] = useState(options[0]?.title)
 
   return (
@@ -60,26 +62,9 @@ export const Technologies = () => {
           ))}
         </SkillsOptionsList>
         <CardContainer>
-          {selected === "Softwares" &&
-            listSoft.map((item, index) => {
-              return (
-                <TechnologyCard
-                  item={item}
-                  key={item.label}
-                  delay={index * 0.05}
-                />
-              )
-            })}
-          {selected === "Tecnologias" &&
-            listTech.map((item, index) => {
-              return (
-                <TechnologyCard
-                  item={item}
-                  key={item.label}
-                  delay={index * 0.05}
-                />
-              )
-            })}
+          {skills[selected].map((item) => {
+            return <TechnologyCard key={item.label} item={item} />
+          })}
         </CardContainer>
       </TechnologiesContainer>
     </TechnologiesBackground>

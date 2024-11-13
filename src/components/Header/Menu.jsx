@@ -13,18 +13,12 @@ export const Menu = () => {
       <NoStyleLinkRouter to={"tecnologies"}>
         <MenuItem>Tecnologias</MenuItem>
       </NoStyleLinkRouter>
-      <NoStyleLinkRouter to={"contact"}>
-        <MenuItem>Contato</MenuItem>
-      </NoStyleLinkRouter>
-      {/* <NoStyleLinkRouter to={"/contact"}>
-        <MenuItem $isSelected={path === "contact"}>Contato</MenuItem>
-      </NoStyleLinkRouter> */}
     </ListMenu>
   )
 }
 
 const ListMenu = styled.ul`
-  background-color: #242424;
+  background-color: var(--bg-color);
   width: min-content;
   height: min-content;
 
@@ -64,7 +58,7 @@ const MenuItem = styled.li`
   cursor: pointer;
 
   &:hover {
-    color: #c96bff;
+    color: #a5c2ff;
   }
   transition: color 200ms;
 
