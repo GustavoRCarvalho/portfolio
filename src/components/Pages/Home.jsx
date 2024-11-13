@@ -18,9 +18,6 @@ export const Home = () => {
       <Element name="tecnologies" className="element">
         <Technologies />
       </Element>
-      {/* <Element name="contact" className="element">
-        <Contact />
-      </Element> */}
     </HomeContainer>
   )
 }
