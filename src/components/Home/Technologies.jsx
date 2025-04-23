@@ -9,6 +9,7 @@ import {
   FaNodeJs,
   FaGitAlt,
   FaGithubSquare,
+  FaVuejs,
 } from "react-icons/fa"
 import { BiLogoVisualStudio } from "react-icons/bi"
 import { SiStyledcomponents, SiRedux } from "react-icons/si"
@@ -24,6 +25,7 @@ const skills = {
   ],
   Tecnologias: [
     { Icon: FaReact, color: "#149eca", label: "React" },
+    { Icon: FaVuejs, color: "#41b883", label: "Vue" },
     { Icon: FaHtml5, color: "#e34c26", label: "HTML" },
     { Icon: FaCss3Alt, color: "#264de4", label: "CSS" },
     { Icon: FaJsSquare, color: "#f0db4f", label: "JavaScript" },

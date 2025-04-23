@@ -14,7 +14,7 @@ export const Projects = () => {
         <NewCard
           title={"Lolja - Réplica"}
           about={
-            "Réplica do famoso e-commerce geek Lolja utilizando React, Styled-Components, React Router, Redux e outras bibliotecas."
+            "Réplica do famoso e-commerce geek Lolja utilizando React, Styled-Components, React Router, Redux, Restfull API calls e outras bibliotecas."
           }
           href={"https://lolja.gustavocarvalho.dev.br/"}
           gitHref={"https://github.com/GustavoRCarvalho/lolja-template"}
@@ -22,7 +22,9 @@ export const Projects = () => {
         />
         <NewCard
           title={"Design Logins"}
-          about={"Designs inovadores aplicados em telas de login."}
+          about={
+            "Demonstração de designs inovadores aplicados em formulários de login."
+          }
           href={"https://loginanimate.gustavocarvalho.dev.br/"}
           gitHref={"https://github.com/GustavoRCarvalho/login-animate"}
           image={loginImage1}
@@ -30,7 +32,7 @@ export const Projects = () => {
         <NewCard
           title={"New Desk"}
           about={
-            "Crie artigos de forma gratuita e compartilhe com seus colegas."
+            "Edição de texto, organização de conteúdos e conexão com Google Drive para armazenar e compartilhar artigos."
           }
           href={"https://newdesk.gustavocarvalho.dev.br/"}
           gitHref={"https://github.com/GustavoRCarvalho/newdesk"}

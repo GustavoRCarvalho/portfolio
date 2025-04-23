@@ -11,9 +11,9 @@ export const AboutHome = () => {
         <Description>
           Eu sou um <b>Front End Developer</b>, graduando em Análise e
           Desenvolvimento de Sistemas e formado em Técnico em Informática.
-          Possuo experiência com desenvolvimento web em <b>JS - React</b> e
-          desenvolvimento mobile com <b>Kotlin e React Native</b>. Trabalhei em
-          times com colaboração de analistas, designs, back ends e QAs,
+          Possuo experiência com desenvolvimento web em <b>JS - React - Vue</b>{" "}
+          e desenvolvimento mobile com <b>Kotlin e React Native</b>. Trabalhei
+          em times com colaboração de analistas, designs, back ends e QAs,
           utilizando metodologias ágeis e uma excelente cooperação e
           organização. Este é meu portfólio onde mostro o que venho
           desenvolvendo nos últimos anos.
