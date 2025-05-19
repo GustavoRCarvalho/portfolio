@@ -1,11 +1,10 @@
 import { styled } from "styled-components"
-import face from "../../assets/images/perfil2.jpg"
 import { NoStyleLinkRouter } from "../Common/NoStyleLinkRouter"
 
 export const ImageHeader = () => {
   return (
     <NoStyleLinkRouter to="/">
-      <Image src={face}></Image>
+      <Image src="/images/perfil2.jpg"></Image>
     </NoStyleLinkRouter>
   )
 }

@@ -1,8 +1,4 @@
 import { ContentLimiter } from "../Common/ContentLimit"
-import codenamesImage2 from "../../assets/images/codenamesImage2.png"
-import loljatemplate1 from "../../assets/images/loljatemplateimage1.png"
-import loginImage1 from "../../assets/images/loginImage1.png"
-import newdeskprint from "../../assets/images/newdeskprint.png"
 import { NewCard } from "../Card/NewCard"
 import { styled } from "styled-components"
 
@@ -12,13 +8,22 @@ export const Projects = () => {
       <TechnologiesTitle>Projetos</TechnologiesTitle>
       <CardContainer>
         <NewCard
+          title={"ITOA: Image to ASCII"}
+          about={
+            "Converte imagens em ASCII usando Vue + Vite e cálculos complexos de filtros com muita eficiência."
+          }
+          href={"https://itoa.gustavocarvalho.dev.br/"}
+          gitHref={"https://github.com/GustavoRCarvalho/image-converter"}
+          image={"/images/ITOA_Image.png"}
+        />
+        <NewCard
           title={"Lolja - Réplica"}
           about={
             "Réplica do famoso e-commerce geek Lolja utilizando React, Styled-Components, React Router, Redux, Restfull API calls e outras bibliotecas."
           }
           href={"https://lolja.gustavocarvalho.dev.br/"}
           gitHref={"https://github.com/GustavoRCarvalho/lolja-template"}
-          image={loljatemplate1}
+          image={"/images/loljatemplateimage1.png"}
         />
         <NewCard
           title={"Design Logins"}
@@ -27,7 +32,7 @@ export const Projects = () => {
           }
           href={"https://loginanimate.gustavocarvalho.dev.br/"}
           gitHref={"https://github.com/GustavoRCarvalho/login-animate"}
-          image={loginImage1}
+          image={"/images/loginImage1.png"}
         />
         <NewCard
           title={"New Desk"}
@@ -36,7 +41,7 @@ export const Projects = () => {
           }
           href={"https://newdesk.gustavocarvalho.dev.br/"}
           gitHref={"https://github.com/GustavoRCarvalho/newdesk"}
-          image={newdeskprint}
+          image={"/images/newdeskprint.png"}
         />
         <NewCard
           title={"Guess The Word - Game"}
@@ -45,7 +50,7 @@ export const Projects = () => {
           }
           href={"https://guesstheword.gustavocarvalho.dev.br/"}
           gitHref={"https://github.com/GustavoRCarvalho/codenames-web"}
-          image={codenamesImage2}
+          image={"/images/codenamesImage2.png"}
         />
         {/* <NewCard
           title={"Shopping List - Estudos"}
