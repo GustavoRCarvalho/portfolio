@@ -4,14 +4,27 @@ import { About } from "./About"
 export const NewCard = ({ title, about, href, gitHref, image }) => {
   return (
     <CardContainer>
-      <CardImage $img={image} onClick={() => window.open(href, "_blank")} />
+      <LinkUnstyled href={href} target="_blank">
+        <CardImage $img={image} />
+      </LinkUnstyled>
       <DescriptionWrapper>
-        <Title onClick={() => window.open(href, "_blank")}>{title}</Title>
+        <LinkUnstyled href={href} target="_blank">
+          <Title onClick={() => window.open(href, "_blank")}>{title}</Title>
+        </LinkUnstyled>
         <About gitHref={gitHref} about={about} />
       </DescriptionWrapper>
     </CardContainer>
   )
 }
+
+const LinkUnstyled = styled.a`
+  color: unset;
+  cursor: unset;
+  text-decoration: unset;
+
+  height: 100%;
+  width: 101%;
+`
 
 const CardImage = styled.img`
   background-image: url(${(props) => props.$img});
@@ -60,7 +73,7 @@ const Title = styled.h2`
 
   text-align: start;
 
-  width: 100%;
+  width: calc(100% - 2em);
 
   margin: 0;
   padding: 0.5em;
